@@ -1,0 +1,40 @@
+{
+  "name": "jubull/alibaba",
+  "description": "阿里巴巴开放平台sdk ，签名算法",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "阿里巴巴开放平台sdk",
+    "签名算法",
+    "ali_open",
+    "Alibaba"
+  ],
+  "authors": [
+    {
+      "name": "jubull",
+      "email": "jubull@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "<9.0.0",
+    "mockery/mockery": "^1.3",
+    "friendsofphp/php-cs-fixer": "^2.16",
+    "monolog/monolog": "^1.25.1",
+    "symfony/dotenv": "^v4.4.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "jubull\\alibaba\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "test\\alibaba\\": "tests/"
+    }
+  }
+}
