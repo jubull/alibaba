@@ -10,7 +10,7 @@ $ composer require javareact/alibaba_open -vvv
 场景： 拉取阿里巴巴商家的采购数据，同步到erp上，采用的是多用户模式
 
 ```php
-        $obj = new \JavaReact\AlibabaOpen\AlibabaClient(['page'=>1]);
+        $obj = new \jubull\alibaba\AlibabaClient(['page'=>1]);
         $obj->setAppkey('你的appkey');
         $obj->setAppsecret('你的秘钥');
         $obj->setAccessToken('自己想办法去获取token，如果设置的是多用户单用户的直接复制，应用管理中的token');//如果是单用户模式,无需添加此参数
@@ -27,7 +27,7 @@ $ composer require javareact/alibaba_open -vvv
 namespace App\Services\AliOpen;
 
 
-class AliOpen extends \JavaReact\AlibabaOpen\AlibabaClient
+class AliOpen extends \jubull\alibaba\AlibabaClient
 {
     public function __construct($params = array())
     {
@@ -42,7 +42,7 @@ class AliOpen extends \JavaReact\AlibabaOpen\AlibabaClient
 
 获取订单列表的例子 
 ```php
-        $get_data =( new  \JavaReact\AlibabaOpen\AlibabaClient([     //这边的AliOpen ,是你设置appkey的对象
+        $get_data =( new  \jubull\alibaba\AlibabaClient([     //这边的AliOpen ,是你设置appkey的对象
             'page'=>1,
             'pageSize'=>100,
         ]))
@@ -52,7 +52,7 @@ class AliOpen extends \JavaReact\AlibabaOpen\AlibabaClient
 ```
 获取订单详情的例子 
 ```php
-        $get_data = (new  \JavaReact\AlibabaOpen\AlibabaClient([
+        $get_data = (new  \jubull\alibaba\AlibabaClient([
             'webSite'=>1688,
             'orderId'=>$this->app->order_id,
         ]))
@@ -63,20 +63,20 @@ class AliOpen extends \JavaReact\AlibabaOpen\AlibabaClient
 ```
 关注商品的例子
 ```php
-        $get_data = (new  \JavaReact\AlibabaOpen\AlibabaClient())
+        $get_data = (new  \jubull\alibaba\AlibabaClient())
             ->product
-            ->productFollow(new \JavaReact\AlibabaOpen\entity\ProductFollowParams('532137286888'))//建议使用此种方法传参
+            ->productFollow(new \jubull\alibaba\entity\ProductFollowParams('532137286888'))//建议使用此种方法传参
             ->get();
 ```
 
 跨境场景下接口获取商品详情
 ```php
-$get_data = (new \JavaReact\AlibabaOpen\AlibabaClient())
+$get_data = (new \jubull\alibaba\AlibabaClient())
     ->setAppkey('you appkey')
     ->setAppsecret('you Appsecret')
     ->setAccessToken('you TOKEN')
     ->product
-    ->getCrossProductInfo(new \JavaReact\AlibabaOpen\entity\CrossProductInfoParam('615890334160')) //商品ID
+    ->getCrossProductInfo(new \jubull\alibaba\entity\CrossProductInfoParam('615890334160')) //商品ID
     ->post();
 ```
 
