@@ -6,7 +6,7 @@ namespace jubull\alibaba\core;
 
 /**
  * Class Exception
- * @package JavaReact\AlibabaOpen\core
+ * @package jubull\alibaba\core
  */
 class Exception extends \Exception
 {

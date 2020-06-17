@@ -5,8 +5,8 @@ namespace jubull\alibaba\core;
 
 /**
  * Class BaseClient
- * @package JavaReact\AlibabaOpen\core
- * @property \JavaReact\AlibabaOpen\AlibabaClient app
+ * @package jubull\alibaba\core
+ * @property \jubull\alibaba\AlibabaClient app
  */
 class BaseClient
 {

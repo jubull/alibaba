@@ -5,7 +5,7 @@ namespace jubull\alibaba\core;
 
 /**
  * Class Container
- * @package JavaReact\AlibabaOpen\core
+ * @package jubull\alibaba\core
  */
 class Container implements \ArrayAccess
 {

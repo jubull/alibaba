@@ -4,7 +4,7 @@ namespace jubull\alibaba\core;
 
 /**
  * Class ContainerBase
- * @package JavaReact\AlibabaOpen\core
+ * @package jubull\alibaba\core
  */
 class ContainerBase extends Container
 {
